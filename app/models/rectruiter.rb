@@ -1,0 +1,2 @@
+class Rectruiter < ApplicationRecord
+end
