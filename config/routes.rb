@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :jobs, only: [:index, :show, :create, :destroy, :update]
   resources :companys, only: [:index, :show]
+  resources :rectruiters, only: [:index]
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
