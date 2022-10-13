@@ -1,3 +1,5 @@
 class CompanySerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :website, :logo, :employees, :mission, :technologies
+
+  has_many :jobs
 end

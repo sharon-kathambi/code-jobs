@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import JobCard from './JobCard';
 import './App.css';
+import Login from './Login';
 
 function App() {
   const [jobs, setJobs] = useState([])
@@ -14,6 +15,9 @@ function App() {
 
   return ( 
   <div className='JobList'>
+    <nav>
+      <Login />
+    </nav>
     <ul className='Jobs'>
       {jobs.map((job) => (
       <JobCard key={job.id} job={job}/>
