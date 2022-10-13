@@ -26,7 +26,7 @@ function Login({onLogin}) {
         id="name"
         value={name}
         onChange={(e) => setName(e.target.value)}/>
-        <Link to='/jobs/:id'>
+        <Link to='/me'>
         <button type='submit'>Sign in</button>
         </Link>
       </form>

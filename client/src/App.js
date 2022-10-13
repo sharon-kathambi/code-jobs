@@ -6,6 +6,8 @@ import CompanyLogin from './CompanyLogin';
 import Login from './Login';
 import Job from './Job';
 import Header from './Header';
+import Members from './Members';
+import JobForm from './JobForm';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
       <Route exact path='/' element={<JobList />}> </Route >
       <Route exact path='/login' element={<Login onLogin={handleLogin} />}> </Route >
       <Route exact path='/jobs/:id' element={<Job />}> </Route >
+      <Route exact path='/members' element={<Members />}></Route>
+      <Route exact path='/new' element={<JobForm />}></Route>
       
     </Routes>
     </div>

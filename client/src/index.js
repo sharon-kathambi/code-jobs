@@ -4,9 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 ReactDOM.render(
   <BrowserRouter>
+  <GlobalStyle />
    <App />
 </BrowserRouter>,
 document.getElementById('root')

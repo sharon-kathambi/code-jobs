@@ -10,7 +10,7 @@ class MembersController < ApplicationController
 
   def show
     job = Job.find(params[:id])
-    render json: job, include: :company
+    render json: job
   end
 
   def create
