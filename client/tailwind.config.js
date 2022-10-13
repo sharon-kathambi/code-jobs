@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export const purge = ["./client/src/**/*.{js,jsx,ts,tsx}", "./public/index.html", "client/src/index.css"];
+export const purge = ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"];
 export const darkMode = false;
 export const theme = {
   fontFamily: {

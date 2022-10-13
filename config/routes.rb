@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :jobs, only: [:index, :show, :create, :destroy, :update]
-  resources :companys, only: [:index, :show]
+  resources :companys, only: [:index]
   resources :rectruiters, only: [:index]
 
   post '/login', to: 'sessions#create'

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Login from './Login';
 
 function CompanyLogin() {
     const [company, setCompany] = useState(null)

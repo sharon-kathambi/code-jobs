@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Login({onLogin}) {
     const [name, setName] = useState('')
@@ -21,10 +22,13 @@ function Login({onLogin}) {
         <input type='text'
         value={name}
         onChange={(e) => setName(e.target.value)}/>
+        <Link to='/me'>
         <button type='submit'>Sign in</button>
+        </Link>
       </form>
     </div>
   )
 }
 
 export default Login
+

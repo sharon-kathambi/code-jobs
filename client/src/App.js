@@ -1,30 +1,20 @@
-
-import React, {useEffect, useState} from 'react'
-import JobCard from './JobCard';
+import React from 'react';
 import './App.css';
-import Login from './Login';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import JobList from './JobList';
+import CompanyLogin from './CompanyLogin';
+
 
 function App() {
-  const [jobs, setJobs] = useState([])
-
-  useEffect(() => {
-    fetch('/jobs')
-    .then((r) => r.json())
-    .then((data) => setJobs(data))
-  }, [])
-
-  return ( 
-  <div className='JobList'>
-    <nav>
-      <Login />
-    </nav>
-    <ul className='Jobs'>
-      {jobs.map((job) => (
-      <JobCard key={job.id} job={job}/>
-      ))}
-      </ul>
-      </div>
+  return (
+    <BrowserRouter>
+    <Routes>
+      <Route exact path='/' element={<JobList />}> </Route >
+      <Route exact path='/me' element={<CompanyLogin />}></Route>
+    </Routes>
+    </BrowserRouter>
   )
+  
 }
 
 export default App;
