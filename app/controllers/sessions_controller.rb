@@ -4,4 +4,9 @@ class SessionsController < ApplicationController
      session[:company_id] = company.id
      render json: company
    end
+
+   def destroy
+    session.delete :company_id
+    head :no_content
+    end
 end

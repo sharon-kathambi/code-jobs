@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function JobCard({job}) {
     const {
+        id,
         name,
         location,
         level,
@@ -35,7 +37,9 @@ function JobCard({job}) {
         featured ? classes.featuredJob : "" }`}>
         <div className={classes.info}>
            <div className={classes.name}>
-            <h2>{name}</h2>
+            <h2>
+                <Link to={`jobs/${id}`}>{name}</Link>
+                </h2>
              {featured && (
                 <span className={classes.featuredFlag}>
                     Featured

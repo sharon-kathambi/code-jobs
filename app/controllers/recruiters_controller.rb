@@ -3,4 +3,5 @@ class RecruitersController < ApplicationController
         recruiter = Rectruiter.all
         render json: recruiter
     end
+
 end

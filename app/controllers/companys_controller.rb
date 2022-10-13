@@ -14,6 +14,8 @@ class CompanysController < ApplicationController
         end
     end
 
+    private
+
     def render_not_found
         render json: {error: 'company not found'}, status: :not_found
     end

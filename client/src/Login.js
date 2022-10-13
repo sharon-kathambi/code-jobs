@@ -19,10 +19,14 @@ function Login({onLogin}) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type='text'
+      <h3>Login With Username</h3>
+      <label htmlFor="username">Username: </label>
+        <input 
+        type='text'
+        id="name"
         value={name}
         onChange={(e) => setName(e.target.value)}/>
-        <Link to='/me'>
+        <Link to='/jobs/:id'>
         <button type='submit'>Sign in</button>
         </Link>
       </form>

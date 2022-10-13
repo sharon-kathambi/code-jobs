@@ -13,9 +13,6 @@ function JobList() {
 
   return (
     <div className='JobList'>
-    <nav>
-      <Login />
-    </nav>
     <ul className='Jobs'>
       {jobs.map((job) => (
       <JobCard key={job.id} job={job}/>
