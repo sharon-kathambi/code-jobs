@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Company from './Company';
 import { useParams } from 'react-router-dom';
 import SignInWall from './SignInWall';
+import { Link } from 'react-router-dom';
 
 
 const initialState = {
@@ -53,13 +54,16 @@ function Job() {
 
 const tags = [level, ...languages];
 
+const { website} = companys
+
   return (
     <div>
     <article>
         <ul>
-            {companys.map((company)=> {
-                <Company company={company} />
-            })}
+        {companys.map((company)=> {
+               <Company company={company} />
+        })} 
+            
 
         </ul>
 
@@ -68,7 +72,7 @@ const tags = [level, ...languages];
     <h1>{name}</h1>
       <small>
         <p>
-          {posted_at} • {location} {salary} {level}
+          {posted_at} • {location} {salary} {level} {companys.name}
         </p>
         <p>
           <em>{tags.map((tag) => {
@@ -77,6 +81,10 @@ const tags = [level, ...languages];
         </p>
       </small>
       <p>{contract}</p>
+      <Link exact to='/login'><button>Company</button></Link>
+      <Link exact to ='/login'><button>Edit Job</button></Link>
+      <Link exact to ='/login'><button>Add Job</button></Link>
+      <Link exact to ='/login'><button>Delete Job</button></Link>
     </article>
     </div>
   )

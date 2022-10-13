@@ -6,12 +6,8 @@ class CompanysController < ApplicationController
     end
 
     def show
-        company = Company.find_by(id: session[:company_id])
-        if company
-            render json: company
-        else
-            render json: { error: 'Not authorized'}, status: :unauthorized
-        end
+        company = Company.find(session[:company_id])
+        render json: company
     end
 
     private
