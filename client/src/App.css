@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Spartan:wght@500;700&display=swap');
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +38,22 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: hsl(180, 52%, 96%);
+  margin: auto;
+  min-width: 375px;
+  }
+
+.App{
+position: relative;
+}
+
+.btn{
+  margin: .5rem;
+  background-color: hsl(180, 31%, 95%);
+  padding: .25rem;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+

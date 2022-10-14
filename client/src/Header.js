@@ -19,10 +19,10 @@ function Header({ company, onLogout }) {
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
-            <>
-          <Link to="/login">Click Here to Login</Link>
-          <Link to="/signup">Click Here to SignUp</Link>
-          </>
+            <section>
+          <Link to="/login"><button>Click Here to Login</button></Link>
+          <Link to="/signup"><button>Click Here to SignUp</button></Link>
+          </section>
         )}
         </div>
       </header>

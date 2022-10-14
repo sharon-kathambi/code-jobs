@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import "@blueprintjs/core/lib/css/blueprint.css";
+import { Button } from "@blueprintjs/core";
 
 function JobCard({job}) {
     const {
@@ -15,6 +17,7 @@ function JobCard({job}) {
     } = job
 
     const tags = [level, ...languages];
+
 
     const classes = {
         wrapper:
@@ -33,9 +36,10 @@ function JobCard({job}) {
     };
 
   return (
-    <div className={`${classes.wrapper} ${
+    <div className={`${classes.wrapper}}${
         featured ? classes.featuredJob : "" }`}>
-        <div className={classes.info}>
+       <Link to={`jobs/${id}`}>
+         <div className={'bp4-card bp4-elevation-0 bp4-interactive'}>
            <div className={classes.name}>
             <h2>
                 <Link to={`jobs/${id}`}>{name}</Link>
@@ -47,29 +51,27 @@ function JobCard({job}) {
              )}
            </div>
           
-            <ul className={classes.details}>
-              <li>{posted_at}</li>
+            <div className={classes.details}>
+              <h3>{posted_at}</h3>
               <span aria-hidden="true">&#8226;</span>
-              <li>{contract}</li>
+              <h3>{contract}</h3>
               <span aria-hidden="true">&#8226;</span>
-              <li>{location}</li>
+              <h3>{location}</h3>
               <span aria-hidden="true">&#8226;</span>
-              <li>{salary}</li>
-            </ul>
-        </div>
+              <h3>{salary}</h3>
+            </div>
+       
             
-            <ul className={classes.tags}>
+            <div className={classes.tags}>
                 {tags.map(tag => (
-                    <li>
                         <button
-                            className={classes.tag}
-                        >
+                            className={classes.tag}>
                             {tag}
                         </button>
-                    </li>
                 ))}
-            </ul>
-      
+            </div>
+      </div>
+      </Link>
     </div>
   )
 }

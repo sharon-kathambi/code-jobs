@@ -24,3 +24,5 @@ Rectruiter.create(name: 'Paul Peter', image: 'https://thumbs.dreamstime.com/b/ma
 
 Rectruiter.create(name: 'Dave Collins', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlvapOOKTYbJNRayZFsm-7FFJG5_MOVnrfWQ&usqp=CAU', company_id: company3.id, job_id: job3.id)
 Rectruiter.create(name: 'Dave Collins', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlvapOOKTYbJNRayZFsm-7FFJG5_MOVnrfWQ&usqp=CAU', company_id: company3.id, job_id: job4.id)
+
+puts "Done"

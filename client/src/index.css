@@ -16,3 +16,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  display: justify flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+
+header button {
+  font-size: 1rem;
+  display: inline-flex;
+  background-color: #fff8e7;
+  border: 1px solid salmon;
+  margin: 0rem;
+  padding: 0rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+main {
+  margin: 1rem;
+}
+
+form {
+  background-color: #fff8e7;
+  border: 1px solid salmon;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0 5rem 5rem;
+  height: 100rem;
+}
+
+form input {
+  margin: 0.25rem 0;
+}
+
+form button[type="submit"] {
+  width: 40%;
+}

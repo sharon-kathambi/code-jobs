@@ -13,17 +13,18 @@ class MembersController < ApplicationController
     render json: job
   end
 
-  def create
-    job = Job.create!(job_params)
-    render json: job, status: :created
-
-end
-
-def update
-    job = Job.find(params[:id])
-    job.update!(job_params)
-    render json: job, status: :accepted
-end
+ 
+      def create
+        job = Job.create!(job_params)
+        render json: job, status: :created
+    
+    end
+    
+   def update
+        job = Job.find(params[:id])
+       job.update!(job_params)
+     render json: job, status: :accepted
+    end
 
 def destroy
     job = Job.find(params[:id])
