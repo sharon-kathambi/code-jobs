@@ -1,6 +1,6 @@
 class Job < ApplicationRecord
     has_many :rectruiters
-    has_many :companys, through: :rectruiters
+    has_many :companies, through: :rectruiters
 
     validates :name, presence: true
     validates :location, presence: true

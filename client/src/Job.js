@@ -54,25 +54,15 @@ function Job() {
 
 const tags = [level, ...languages];
 
-const { website} = companys
+//const { website} = companys
 
   return (
     <div>
     <article>
-        <ul>
-        {companys.map((company)=> {
-               <Company company={company} />
-        })} 
-            
-
-        </ul>
-
-    </article>
-    <article>
     <h1>{name}</h1>
       <small>
         <p>
-          {posted_at} • {location} {salary} {level} {companys.name}
+          {posted_at} • {location} {salary} {level}
         </p>
         <p>
           <em>{tags.map((tag) => {

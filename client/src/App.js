@@ -8,6 +8,8 @@ import Job from './Job';
 import Header from './Header';
 import Members from './Members';
 import JobForm from './JobForm';
+import SignUp from './SignUp';
+import JobCard from './JobCard';
 
 
 function App() {
@@ -32,14 +34,25 @@ function App() {
   return (
     <div className='App'>
       <Header company={company} onLogout={handleLogout} />
+      <main>
+        {company ? (
     <Routes>
-      <Route exact path='/' element={<JobList />}> </Route >
+      <Route exact path='/members' 
+      element={<Members/>}> 
+      </Route >
+      </Routes>
+        ): (
+          <Routes>
       <Route exact path='/login' element={<Login onLogin={handleLogin} />}> </Route >
       <Route exact path='/jobs/:id' element={<Job />}> </Route >
-      <Route exact path='/members' element={<Members />}></Route>
       <Route exact path='/new' element={<JobForm />}></Route>
+      <Route exact path='/signup' element={<SignUp setCompany={setCompany}/>}></Route>
+      <Route exact path='/' element={ <JobList/> }></Route>
+      <Route exact path='/me' element={ <CompanyLogin />}></Route>
       
     </Routes>
+        )}
+    </main>
     </div>
   )
   

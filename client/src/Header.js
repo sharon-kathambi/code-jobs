@@ -10,17 +10,21 @@ function Header({ company, onLogout }) {
   
     return (
       <header>
+        <div>
         <h1>
           <Link to="/">Code Jobs</Link>
         </h1>
         {company ? (
           <div>
-            <p>Welcome, {company.name}!</p>
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
+            <>
           <Link to="/login">Click Here to Login</Link>
+          <Link to="/signup">Click Here to SignUp</Link>
+          </>
         )}
+        </div>
       </header>
     );
   }

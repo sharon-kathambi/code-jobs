@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
-     before_action :authorize
+    before_action :authorize
 
   def index
     jobs = Job.where(is_member_only: true).includes(:company).order(created_at: :desc)
